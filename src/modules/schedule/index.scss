@@ -1,0 +1,69 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+@import '../../styles/baseBtn';
+
+.schedule__wrapper {
+    @media screen and (max-width: 992px) {
+        overflow: scroll;
+    }
+    .tab-custom {
+        .ant-tabs-tabpane {
+            padding-left: 0 !important;
+
+            .ant-tabs-nav {
+                width: 250px;
+                height: 550px;
+
+                .ant-tabs-tab {
+                    width: 100%;
+                    padding-right: 10px;
+                    padding-left: 10px;
+
+                    .ant-tabs-tab-btn {
+                        width: 100%;
+
+                        h5,
+                        p {
+                            white-space: break-spaces;
+                            text-align: left;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ant-tabs-nav-more {
+            display: none !important;
+        }
+    }
+
+    .showtimes {
+        overflow-y: scroll;
+        width: 450px !important;
+        height: 550px;
+        h5 {
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+
+    .ant-btn {
+        width: 20%;
+        text-align: center;
+        margin: $m-2;
+        font-size: $fs-9;
+        @extend .my-btn;
+        color: $black-1;
+        box-shadow: 0 0 0 4.8rem $light-1 inset;
+    }
+}
+
+.title {
+    background-color: rgba(114, 89, 197, 0.1333333333);
+    text-transform: uppercase;
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+}

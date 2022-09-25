@@ -1,0 +1,115 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+@import '../../styles/baseBtn';
+
+.header {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    padding: 30px 80px;
+    transition: all 0.6s ease-in-out;
+    r .navbar-brand img {
+        cursor: pointer;
+    }
+
+    .navbar-toggler-icon {
+        @include textGradient($fs-3);
+    }
+
+    .nav__header {
+        width: fit-content;
+        @include textGradient($fs-3);
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            @include bgGradient(right);
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+        }
+
+        &.active::after {
+            opacity: 1;
+            width: 100%;
+        }
+
+        &:hover::after {
+            width: 100%;
+            opacity: 1;
+        }
+
+        @include mediaQuery($md) {
+            font-size: $fs-2;
+        }
+
+        @include mediaQuery($sm) {
+            font-size: $fs-1;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-9;
+        }
+    }
+
+    .btn__display {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 1em;
+
+        .login-btn {
+            @extend .my-btn;
+        }
+
+        .register-btn {
+            @extend .my-btn;
+            box-shadow: 0 0 0 4.8rem $theme-2 inset;
+        }
+
+        .logout-btn {
+            @extend .my-btn;
+            box-shadow: 0 0 0 4.8rem $theme-3 inset;
+        }
+
+        & h1 {
+            @include textStyle($fs-3, $fw-4, $lh-2, $theme-3);
+
+            @include mediaQuery($md) {
+                font-size: $fs-2;
+            }
+
+            @include mediaQuery($sm) {
+                font-size: $fs-1;
+            }
+
+            @include mediaQuery($xs) {
+                font-size: $fs-1;
+            }
+
+            & sup {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.header.fixed {
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+    padding: 5px 80px !important;
+    background-color: #ece9f7;
+}
+
+.wrapper {
+    position: relative;
+    height: 80px;
+}

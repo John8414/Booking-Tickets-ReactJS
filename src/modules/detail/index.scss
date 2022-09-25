@@ -1,0 +1,44 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+@import '../../styles/baseBtn';
+
+.detail__wrapper {
+    .detail__tenPhim {
+        text-align: center;
+        color: $theme-3;
+        font-size: $fs-2;
+
+        @include mediaQuery($md) {
+            font-size: $fs-1 ;
+        }
+
+        @include mediaQuery($sm) {
+            font-size: $fs-9 ;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-10 ;
+        }
+
+    }
+
+    .detail__moTa {
+        font-size: $fs-2;
+
+        @include mediaQuery($md) {
+            font-size: $fs-1 ;
+        }
+
+        @include mediaQuery($sm) {
+            font-size: $fs-9 ;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-10 ;
+        }
+    }
+
+    .trailer0-btn {
+        @extend .my-btn;
+    }
+}

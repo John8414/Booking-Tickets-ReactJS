@@ -1,0 +1,17 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+
+
+.loaderCustom {
+    position: absolute;
+    z-index: 9;
+    overflow: hidden;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .imgLoader {
+        width: 100%;
+    }
+}

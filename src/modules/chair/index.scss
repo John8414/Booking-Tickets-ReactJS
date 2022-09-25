@@ -1,0 +1,33 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+@import '../../styles/baseBtn';
+
+.seat {
+    @extend .base-seat;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: $selecting;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &.Vip {
+        background-color: $vip;
+
+        &:hover {
+            background-color: $selecting;
+        }
+    }
+
+    &.selecting {
+        background-color: $selecting;
+    }
+
+    &.daDat {
+        background-color: $booked;
+        cursor: no-drop;
+    }
+}

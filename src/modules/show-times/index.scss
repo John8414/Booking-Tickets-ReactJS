@@ -1,0 +1,83 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+@import '../../styles/baseBtn';
+
+
+.showtimes__wrapper {
+    .showtimes__tenPhim {
+        text-align: center;
+        @include textGradient($fs-4);
+
+        @include mediaQuery($md) {
+            font-size: $fs-3 ;
+        }
+
+        @include mediaQuery($sm) {
+            font-size: $fs-2 ;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-1 ;
+        }
+    }
+
+    .cinema__nav {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: $fs-1;
+
+        @include mediaQuery($sm) {
+            font-size: $fs-9 ;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-10;
+        }
+    }
+
+    .nav-link.active {
+        background-color: transparent !important;
+        @include bgGradient(right);
+    }
+
+    .showtimes__tenCumRap {
+
+
+        @include textStyle($fs-3, $fw-3, $lh-1, $theme-1);
+
+
+
+        @include mediaQuery($sm) {
+            font-size: $fs-2 ;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-1;
+        }
+    }
+
+    .diaChi {
+        font-size: $fs-2 ;
+
+        @include mediaQuery($sm) {
+            font-size: $fs-9 ;
+        }
+
+        @include mediaQuery($xs) {
+            font-size: $fs-10 ;
+        }
+    }
+
+    .lichChieuBtn {
+        @extend .my-btn;
+        box-shadow: 0 0 0 4.8rem white inset;
+        width: 10em;
+        margin-right: 1em;
+
+        & a {
+            text-decoration: none;
+            color: $theme-2;
+        }
+    }
+
+}

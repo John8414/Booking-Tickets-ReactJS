@@ -1,0 +1,79 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+@import '../../styles/baseBtn';
+
+
+.booking_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9;
+    color: $light-1;
+
+    .standard {
+        @extend .base-seat;
+    }
+
+    .Vip {
+        @extend .base-seat;
+        background-color: violet;
+    }
+
+    .selecting {
+        @extend .base-seat;
+        background-color: rgba(78, 156, 78, 0.655);
+    }
+
+    .daDat {
+        @extend .base-seat;
+        background-color: $booked;
+    }
+
+    .booking_table {
+        h2 {
+            text-align: center;
+            @include textGradient($fs-3);
+
+            @include mediaQuery($md) {
+                font-size: $fs-2;
+            }
+
+            @include mediaQuery($sm) {
+                font-size: $fs-2;
+            }
+
+            @include mediaQuery($xs) {
+                font-size: $fs-1;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .book-btn {
+            @extend .my-btn;
+            box-shadow: 0 0 0 4.8rem #49e458e0 inset;
+        }
+    }
+
+    .screen {
+        background-image: url('../../../src/assets/images/bg-screen.png');
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 45px;
+        margin: 20px auto 40px;
+        background-size: 100% auto;
+        filter: drop-shadow(4px 25px 20px rgba(194, 190, 190, 0.5));
+        box-shadow: 0px 34px 51px -8px rgb(117, 105, 105);
+    }
+
+    .seatList {
+        width: 975px;
+        overflow-x: scroll;
+
+        .seatListContainer {
+            width: 100%;
+        }
+    }
+}

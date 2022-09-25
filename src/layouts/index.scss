@@ -1,0 +1,8 @@
+@import '../styles/variable';
+@import '../styles/mixin';
+
+.bg__wrapper {
+    position: inherit;
+    z-index: -1;
+    @include bgGradient(top);
+}
